@@ -7,6 +7,7 @@ package Views;
 import Conexion.conex;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
         
@@ -34,11 +35,16 @@ conex con = new conex();
         jPanel1 = new javax.swing.JPanel();
         btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         txtUsuarioLogin = new javax.swing.JTextField();
         txtPasswordLogin = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
         lblImagen = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         btnRegistro = new javax.swing.JButton();
         txtNombres = new javax.swing.JTextField();
@@ -51,165 +57,191 @@ conex con = new conex();
         txtEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
+        lblImagen1 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido a la Aplicacion");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 255, 51));
+        jTabbedPane1.setBackground(new java.awt.Color(51, 0, 51));
+        jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
 
-        btnLogin.setText("Iniciar Sesión");
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnLogin.setBackground(new java.awt.Color(0, 0, 153));
+        btnLogin.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Ingresar");
+        btnLogin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
             }
         });
+        jPanel1.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 160, 50));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
-        jLabel1.setText("Usuario:");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel1.setText("CORREO ELECTRÓNICO");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 300, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel2.setText("Contraseña:");
+        jSeparator2.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 280, 10));
 
-        jLabel8.setFont(new java.awt.Font("SimSun-ExtB", 3, 24)); // NOI18N
-        jLabel8.setText("LOGIN");
+        jLabel2.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel2.setText("CONTRASEÑA");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+
+        txtUsuarioLogin.setBackground(new java.awt.Color(204, 255, 255));
+        txtUsuarioLogin.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        txtUsuarioLogin.setForeground(new java.awt.Color(102, 102, 102));
+        txtUsuarioLogin.setBorder(null);
+        txtUsuarioLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioLoginActionPerformed(evt);
+            }
+        });
+        txtUsuarioLogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtUsuarioLoginKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtUsuarioLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 280, 40));
+
+        txtPasswordLogin.setBackground(new java.awt.Color(204, 255, 255));
+        txtPasswordLogin.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        txtPasswordLogin.setForeground(new java.awt.Color(102, 102, 102));
+        txtPasswordLogin.setBorder(null);
+        jPanel1.add(txtPasswordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 280, 30));
+
+        jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
+        jLabel8.setText("INICIAR SESIÓN");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 290, 48));
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/file.jpg"))); // NOI18N
+        jPanel1.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 100, 90));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnLogin)
-                        .addGap(154, 154, 154))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtUsuarioLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                                .addComponent(txtPasswordLogin))
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblImagen)
-                        .addGap(18, 18, 18))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtUsuarioLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(lblImagen)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtPasswordLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+        jLabel11.setFont(new java.awt.Font("Viner Hand ITC", 2, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("VET CLINIC");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 220, 60));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/Captura_de_pantalla_2024-07-04_191402-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 90, 70));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/group-of-pets-including-two-cats-and-a-few-dogs-strolling-on-the-sunny-meadow-grass-photo (2).jpg"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 230, 400));
+
+        jSeparator3.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 280, 10));
 
         jTabbedPane1.addTab("Login", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(665, 401));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnRegistro.setText("Registrar usuario");
+        btnRegistro.setBackground(new java.awt.Color(0, 0, 153));
+        btnRegistro.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
+        btnRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistro.setText("REGISTRARSE");
+        btnRegistro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistroActionPerformed(evt);
             }
         });
+        jPanel2.add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 180, 40));
 
-        jLabel3.setText("Nombres: ");
+        txtNombres.setBackground(new java.awt.Color(204, 255, 255));
+        txtNombres.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        txtNombres.setForeground(new java.awt.Color(102, 102, 102));
+        txtNombres.setBorder(null);
+        txtNombres.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombresKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 330, 30));
 
-        jLabel4.setText("Apellidos:");
+        jLabel3.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel3.setText("Nombres");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 113, 22));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel4.setText("Apellidos");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 101, -1));
+
+        txtApellidos.setBackground(new java.awt.Color(204, 255, 255));
+        txtApellidos.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        txtApellidos.setForeground(new java.awt.Color(102, 102, 102));
+        txtApellidos.setBorder(null);
+        txtApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidosKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 280, 30));
+
+        comboTipoUsuario.setBackground(new java.awt.Color(204, 255, 255));
+        comboTipoUsuario.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        comboTipoUsuario.setForeground(new java.awt.Color(102, 102, 102));
         comboTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Usuario Paciente", "Médico Veterinario" }));
+        comboTipoUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(comboTipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, -1));
 
-        jLabel5.setText("Tipo de Usuario:");
+        jLabel5.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel5.setText("Tipo de Usuario");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));
 
-        jLabel6.setText("Correo Electrónico:");
+        jLabel6.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel6.setText("Correo Electrónico");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
-        jLabel7.setText("Crear contraseña:");
+        txtEmail.setBackground(new java.awt.Color(204, 255, 255));
+        txtEmail.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(102, 102, 102));
+        txtEmail.setBorder(null);
+        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 280, 30));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(comboTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 65, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(btnRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(comboTipoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(btnRegistro)
-                .addGap(33, 33, 33))
-        );
+        jLabel7.setFont(new java.awt.Font("Segoe UI Variable", 1, 20)); // NOI18N
+        jLabel7.setText("Crear contraseña");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 167, -1));
+
+        txtPassword.setBackground(new java.awt.Color(204, 255, 255));
+        txtPassword.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(102, 102, 102));
+        txtPassword.setBorder(null);
+        jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 240, 30));
+
+        lblImagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/file.jpg"))); // NOI18N
+        jPanel2.add(lblImagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 100, 90));
+
+        jLabel12.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
+        jLabel12.setText("REGISTRO DE USUARIO");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, 57));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/png-transparent-love-and-cat-prints-cartoon-cat-cat-footprint-animal-footprint-thumbnail-removebg-preview (1).png"))); // NOI18N
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 183, -1, -1));
+
+        jSeparator4.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 240, 10));
+
+        jSeparator5.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 280, 20));
+
+        jSeparator6.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 290, 10));
+
+        jSeparator7.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 330, 10));
 
         jTabbedPane1.addTab("Agregar usuarios", jPanel2);
 
@@ -217,11 +249,14 @@ conex con = new conex();
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, Short.MAX_VALUE)
         );
 
         pack();
@@ -231,6 +266,9 @@ conex con = new conex();
         // TODO add your handling code here:
         String usuario=txtUsuarioLogin.getText();
         String pass=txtPasswordLogin.getText();
+        if(txtUsuarioLogin.getText().equals("") || txtPasswordLogin.equals("")){
+            JOptionPane.showMessageDialog(null, "Los campos no pueden estar vacíos");
+        }else{
         if(!usuario.equals("")||!pass.equals("")){
             try {
                 PreparedStatement ps=(PreparedStatement) cn.prepareStatement("SELECT tipousuario FROM usuarios WHERE email='"+usuario+"' AND contraseña='"+pass+"'");
@@ -257,7 +295,7 @@ conex con = new conex();
             JOptionPane.showMessageDialog(null,"POR FAVOR, COMPLETE LOS CAMPOS");
         }
     }//GEN-LAST:event_btnLoginActionPerformed
-
+    }
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
         // TODO add your handling code here:
         String nombres = txtNombres.getText();
@@ -285,6 +323,30 @@ conex con = new conex();
             }
         }
     }//GEN-LAST:event_btnRegistroActionPerformed
+
+    private void txtUsuarioLoginKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsuarioLoginKeyTyped
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtUsuarioLoginKeyTyped
+
+    private void txtNombresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombresKeyTyped
+        // TODO add your handling code here:
+        if(!(Character.isLetter(evt.getKeyChar()))&& !(evt.getKeyChar()==KeyEvent.VK_SPACE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNombresKeyTyped
+
+    private void txtApellidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosKeyTyped
+        // TODO add your handling code here:
+        if(!(Character.isLetter(evt.getKeyChar()))&& !(evt.getKeyChar()==KeyEvent.VK_SPACE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtApellidosKeyTyped
+
+    private void txtUsuarioLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioLoginActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -326,6 +388,10 @@ conex con = new conex();
     private javax.swing.JButton btnRegistro;
     private javax.swing.JComboBox<String> comboTipoUsuario;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -333,10 +399,18 @@ conex con = new conex();
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblImagen1;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNombres;
